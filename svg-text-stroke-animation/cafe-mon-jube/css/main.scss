@@ -1,0 +1,33 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lobster', cursive;
+  background: #313131;
+}
+
+svg text {
+  stroke: pink;
+  font-size: 5rem;
+  font-weight: 400;
+  stroke-width: 1;
+  animation: animate-stroke 3s ease-in-out infinite alternate;
+}
+
+@keyframes animate-stroke {
+  0% {
+    // percentage of the current viewport
+    stroke-dasharray: 0 50%; // dash(0) gap(50% of viewport)
+    stroke-dashoffset: 20%;
+  }
+  100% {
+    stroke-dasharray: 50% 0;
+  }
+}
