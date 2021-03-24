@@ -1,0 +1,58 @@
+body {
+  height: 400vh;
+  margin: 0;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  right: 10%;
+  top: 25%;
+}
+
+section {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  z-index: 2;
+  position: relative;
+}
+
+svg {
+  position: fixed;
+  // For inline SVG, width & height defined in CSS will override the dimensions and aspect ratio set in the code
+  width: 100%; // you want to explicitly set the width for svg element
+  height: 100%;
+  top: 0;
+  z-index: -1;
+}
+
+h1,
+h2 {
+  font-family: 'Montserrat';
+  font-size: 4em;
+  // opacity: 0;
+}
+
+.animate {
+  animation: reveal 1s forwards;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateX(-180px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.text-path {
+  text-transform: uppercase;
+  font-weight: bold;
+  fill: #e6e6e6;
+}

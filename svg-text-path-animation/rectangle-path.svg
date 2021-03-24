@@ -1,0 +1,16 @@
+
+<!-- Go to https://jakearchibald.github.io/svgomg/ to convert polyline into paths -->
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 417.09 397.47">
+    <defs>
+      <style>
+        .cls-1 {
+          fill: #fff;
+        }
+      </style>
+    </defs>
+    <g id="Layer_2" data-name="Layer 2">
+      <g id="Layer_1-2" data-name="Layer 1">
+        <polyline class="cls-1" points="0 0 0 397.47 417.09 397.47 417.09 0 7.59 0" />
+      </g>
+    </g>
+  </svg>

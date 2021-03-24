@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG Text Path Animation</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <section>
+    <h1 class="anim">SVG Text Path Animation</h1>
+  </section>
+  <section>
+    <img src="./image.jpg" alt="a living room with white walls and two arched windows" class="anim">
+    <h2 class="anim">Some Beautiful Image</h2>
+  </section>
+  <section>
+    <h2 class="anim">Another section to animate</h2>
+  </section>
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 417.09 397.47">
+    <path id="svg-text" fill="#fff" d="M0 0v397.47h417.09V0H7.59" data-name="Layer 1" />
+    <text y="40" font-size="20" font-family="Montserrat, Arial">
+      <textpath id="text-path" class="text-path" href="#svg-text" startoffset="400">
+        Text inside &lt;textpath&gt; connected to &lt;path&gt;.
+      </textpath>
+    </text>
+  </svg>
+
+
+  <script>
+
+    const textPath = document.querySelector('#text-path');
+
+    function updateTextPathOffset(offset) {
+      textPath.setAttribute('startOffset', offset)
+    }
+
+    function onScroll() {
+      requestAnimationFrame(() => {
+        updateTextPathOffset(window.scrollY * 1.5)
+      })
+    }
+
+    window.addEventListener('scroll', onScroll);
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        console.log(entry)
+        // IntersectionObserverEntry {          
+        //   boundingClientRect: DOMRectReadOnly { x: 299, y: 411, width: 842, height: 78, top: 411, … }
+        //   intersectionRatio: 1
+        //   intersectionRect: DOMRectReadOnly { x: 299, y: 411, width: 842, height: 78, top: 411, … }
+        //   isIntersecting: true
+        //   isVisible: false
+        //   rootBounds: DOMRectReadOnly { x: 0, y: 0, width: 1440, height: 900, top: 0, … }
+        //   target: h1.anim
+        //   time: 385.28999999834923
+        // }
+        if (entry.isIntersecting) {
+          console.log(`${entry.target.tagName} is intersecting.`)
+          entry.target.classList.add('animate')
+        } else {
+          entry.target.classList.remove('animate')
+        }
+      })
+    })
+    const titles = document.querySelectorAll('.anim');
+    titles.forEach(title => {
+      observer.observe(title)
+    })
+
+  </script>
+</body>
+
+</html>
