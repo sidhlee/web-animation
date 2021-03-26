@@ -1,0 +1,102 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Lobster", cursive;
+  background: #313131;
+  color: white;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+label {
+  display: block;
+  font-family: sans-serif;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 1em;
+  gap: 2em;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2em;
+}
+
+code {
+  font-size: 1.5rem;
+}
+
+.display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2em;
+}
+
+.examples {
+  padding: 1em;
+}
+
+.example {
+  width: 100%;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2em;
+  background-color: #222;
+}
+
+.example--one svg {
+  width: 100%;
+  height: 100%;
+}
+.example--one svg text {
+  stroke: goldenrod;
+  font-size: 140px;
+  font-weight: 400;
+  stroke-width: 3;
+  stroke-dasharray: 0% 0%;
+  stroke-dashoffset: 0%;
+}
+
+.example--two svg {
+  width: 90%;
+  height: 100%;
+  display: block;
+  margin: auto;
+}
+.example--two svg line {
+  stroke-width: 50;
+  stroke: goldenrod;
+}
+/*# sourceMappingURL=main.css.map */

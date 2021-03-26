@@ -1,0 +1,89 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lobster', cursive;
+  background: #313131;
+  color: white;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+label {
+  display: block;
+  font-family: sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  padding: 1em;
+  gap: 2em;
+}
+
+form {
+  display: flex;
+  gap: 2em;
+}
+
+code {
+  font-size: 1.5rem;
+}
+
+.display {
+  display: flex;
+  gap: 2em;
+}
+
+.examples {
+  padding: 1em;
+}
+
+.example {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+  background-color: #222;
+}
+
+.example--one {
+  svg {
+    width: 100%;
+    height: 100%;
+    text {
+      stroke: goldenrod;
+      font-size: 140px; // 500% of default font-size (16px)
+      font-weight: 400;
+      stroke-width: 3;
+      stroke-dasharray: 0% 0%;
+      stroke-dashoffset: 0%;
+    }
+  }
+}
+
+.example--two {
+  svg {
+    width: 90%;
+    height: 100%;
+    display: block; // svg is an inline element!
+    margin: auto;
+    line {
+      stroke-width: 50;
+      stroke: goldenrod;
+    }
+  }
+}

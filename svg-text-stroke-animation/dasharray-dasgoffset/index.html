@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dasharray & Dashoffset</title>
+  <link rel="stylesheet" href="./css/main.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <form>
+      <div class="input-group">
+        <label for="dasharray-stroke">Array-stroke</label>
+        <input type="range" id="dasharray-stroke" min="0" max="100" step="1" value="0" />
+      </div>
+      <div class="input-group">
+        <label for="dasharray-gap">Array-gap</label>
+        <input type="range" id="dasharray-gap" min="0" max="100" step="1" value="0" />
+      </div>
+      <div class="input-group">
+        <label for="dashoffset">Offset</label>
+        <input type="range" id="dashoffset" min="0" max="100" step="1" value="0" />
+      </div>
+    </form>
+    <section class="display">
+      <p><code>dasharray-stoke: <span class="display__stroke">0%</span> <span class="display__gap">0%</span></code></p>
+      <p><code>dasharray-offset: <span class="display__offset">0%</span></code></p>
+    </section>
+  </header>
+  <ul class="examples">
+    <li class="example example--one">
+      <svg>
+        <text class="svg-graphic" x="50%" y="50%" fill="transparent" text-anchor="middle" dominant-baseline="middle">
+          Cafe Mon Jube
+        </text>
+      </svg>
+    </li>
+    <li class="example example--two">
+      <svg>
+        <line class="svg-graphic" x1="0%" y1="50%" x2="100%" y2="50%" />
+        <!--
+          the following red lines highlight the
+          offset of the dash array for each line
+          -->
+        <path d="M0,5 h-3 M0,7 h3 M0,9 h-1" stroke="rgba(255,0,0,.5)" />
+      </svg>
+    </li>
+  </ul>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
